@@ -33,7 +33,7 @@ const obj2 = {
 const obj3 = {obj1, obj2} // object inside object
 console.log(obj3)
 
-// copy noly the elements of objects inside on other object
+// copy only the elements of objects inside on other object
 const obj4 = Object.assign({}, obj1, obj2) // {} is not necessary but is a good practice
 console.log(obj4)
 
