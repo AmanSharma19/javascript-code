@@ -19,3 +19,8 @@ if(true){
     console.log("Inner: ",aman) // it will print 100 because of block scope of let and const but if we use var it will print 100 because of function scope of var
 }
 console.log(aman) // it will print 202 because of block scope of let and const but if we use var it will print 100 because of function scope of var
+
+// expression -> when we assign a value to a variable it is called expression
+const val = function(num){
+    return num * num
+}
