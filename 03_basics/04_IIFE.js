@@ -15,6 +15,3 @@
 ((name) => {
     console.log(`NEW connected ${name}`)
 })("AMAN"); // to pass argument add in this ()
-
-
-
