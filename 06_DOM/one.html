@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="title">DOM Learning on Chai Aur Code</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>
+
+console.dir(document);
+console.log(document);
+console.log(document.domain);
+console.log(document.URL);
+console.log(document.title);
+console.log(document.doctype);
+console.log(document.head); 
+
+
+
+DOM diagram of our html code
+
+                         window
+                            |
+                         document
+                            |
+                         html // html has two parts head and body
+                 |                            |
+               head                         body
+        |     |                               |                                                         
+    title  meta                              div
+    |       |                            |         |        
+text node  attribute                     h1        p            
+
+DOM is a tree structure where each element is a node. The document is the root node, and it has child nodes like html, head, and body. The html node has child nodes like title, meta, h1, and p. Each node can have its own properties and methods that can be accessed and manipulated using JavaScript.
+
+
+
+document.getElementById('id-name');
+// This method is used to select an element by its unique ID. It returns the element with
+the specified ID or null if no such element exists. The ID should be unique within the document.
+
+document.getElementsByClassName('class-name');
+// This method is used to select elements by their class name. It returns a live HTMLCollection of all elements with the specified class name. If no elements match, it returns an empty HTMLCollection.
+
+document.getElementsByTagName('tag-name');
+// This method is used to select elements by their tag name. It returns a live HTMLCollection
+of all elements with the specified tag name. If no elements match, it returns an empty HTMLCollection.
+
+document.querySelector('css-selector');
+// This method is used to select the first element that matches a specified CSS selector. It returns
+the first matching element or null if no matches are found. The CSS selector can be any valid selector, such as an ID, class, or tag name.
+
+document.querySelectorAll('css-selector');
+// This method is used to select all elements that match a specified CSS selector. It returns a
+static NodeList of all matching elements. If no matches are found, it returns an empty NodeList. The CSS selector can be any valid selector, such as an ID, class, or tag name.
+
+document.getElementById('id-name').className;
+// This property is used to get or set the class name of an element. When getting the
+class name, it returns a string containing the class names of the element. When setting the class name, you can assign a new string of class names to the element, which will replace any existing class names.
+
+document.getElementById('id-name').id;
+// This property is used to get or set the ID of an element. When getting the ID, it returns the string value of the element's ID. When setting the ID, you can assign
+a new string value to the element's ID, which should be unique within the document.
+
+document.getElementById('id-name').innerText;
+// This property is used to get or set the text content of an element. When getting the text content, it returns a string representing the visible text of the element and its descendants. When setting
+
+document.getElementById("id-name").getAttribute("attribute-name");
+
+document.getElementById("id-name").setAttribute("attribute-name", "value");
+
+document.getElementById("id-name").removeAttribute("attribute-name");
+
+document.getElementById("id-name").hasAttribute("attribute-name");
+
+document.getElementById("id-name").textContent;
+// This property is used to get or set the text content of an element. When getting the text content, it returns a string representing the text content of the element and its descendants, including hidden text. When setting the text content, you can assign a new string value to the element, which will replace any existing content.
+
+document.getElementById("id-name").innerHTML;
+// This property is used to get or set the HTML content of an element. When getting the
+HTML content, it returns a string representing the HTML markup of the element's content. When setting the HTML content, you can assign a new string of HTML markup to the element, which will replace any existing content. Be cautious when using innerHTML, as it can lead to security vulnerabilities if the input is not properly sanitized.
+
