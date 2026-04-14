@@ -85,3 +85,29 @@ document.getElementById("id-name").innerHTML;
 // This property is used to get or set the HTML content of an element. When getting the
 HTML content, it returns a string representing the HTML markup of the element's content. When setting the HTML content, you can assign a new string of HTML markup to the element, which will replace any existing content. Be cautious when using innerHTML, as it can lead to security vulnerabilities if the input is not properly sanitized.
 
+document.querySelectorAll('li')
+// This method is used to select all <li> elements in the document. It returns a static NodeList of all matching <li> elements. If no <li> elements are found, it returns an empty NodeList.
+
+document.querySelectorAll('li')[0].innerText;
+// This code selects the first <li> element from the NodeList returned by document.querySelector
+
+document.querySelectorAll('li')[0].forEach(li => console.log(li.innerText));
+// This code is incorrect because document.querySelectorAll('li')[0] returns a single <
+li> element, not a NodeList. The forEach method cannot be called on a single element. To iterate over all <li> elements, you should call forEach on the NodeList returned by document.querySelectorAll('li') instead:
+##document.querySelectorAll('li').forEach(li => console.log(li.innerText));
+
+getElementByClassName('class-name') returns an HTMLCollection, which is a live collection of elements. It does not have the forEach method directly available. To iterate over the elements in an HTMLCollection, you can convert it to an array first or use a traditional for loop. Here's how you can do it:
+// Using Array.from to convert HTMLCollection to an array
+Array.from(document.getElementsByClassName('class-name')).forEach(element => {
+    console.log(element.innerText);
+});
+// Using a traditional for loop
+const elements = document.getElementsByClassName('class-name');
+for (let i = 0; i < elements.length; i++) {
+    console.log(elements[i].innerText);
+}
+
+for query selector we can use forEach directly because it returns a NodeList, which has the forEach method available. For example:
+document.querySelectorAll('.class-name').forEach(element => {
+    console.log(element.innerText);
+});
