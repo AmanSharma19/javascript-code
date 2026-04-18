@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node list by chai aur code</title>
+</head>
+<body>
+    
+</body>
+<script>
+    document.createElement('div'); // This method creates a new HTML element specified by the tag name. It returns the newly created element, which can then be added to the DOM using methods like appendChild() or insertBefore().    
+    const div = document.createElement('div'); // Create a new div element
+    div.className = 'main';
+    div.id = Math.round(Math.random() * 1000); // Assign a random ID to the div
+    div.setAttribute('title', 'generated title'); // Set a custom data attribute
+    div.style.backgroundColor = 'yellow'; // Set the background color of the div
+    div.innerHTML = 'This is a dynamically created div.'; // Set the inner HTML
+    document.body.appendChild(div); // Append the newly created div to the body of the document
+    const addText = document.createTextNode('This is a text node'); // Create a new text node
+    div.appendChild(addText); // Append the text node to the div
+</script>
+</html>
